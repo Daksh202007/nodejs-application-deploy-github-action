@@ -15,10 +15,7 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
+
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@v1.2.0
