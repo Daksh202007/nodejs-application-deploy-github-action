@@ -24,7 +24,7 @@ jobs:
           username: root
           key: ${{ secrets.SSH_KEY }}
           script:
-            cd /root/nodejs-application-deploy-github-action
+            cd "/root/nodejs-application-deploy-github-action"
             git config --global http.postBuffer 157286400
             git pull
             docker compose up -d --build
