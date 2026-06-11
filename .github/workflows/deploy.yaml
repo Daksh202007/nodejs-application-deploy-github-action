@@ -11,10 +11,15 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/Checkout@v4
+        uses: actions/Checkout@v4.2.2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
 
       - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SSH_HOST}}
           username: root
